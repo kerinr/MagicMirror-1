@@ -54,7 +54,7 @@
 		<h2>...</h2>
 		<?php // Code for getting the RSS-news-feed
 			$rss = new DOMDocument();
-			$rss->load('http://feeds.idg.se/idg/vzzs'); // Specify the address to the feed
+			$rss->load('http://www.wired.com/category/security/feed/'); // Specify the address to the feed
 			$feed = array();
 				foreach ($rss->getElementsByTagName('item') as $node) {
 					$item = array (
@@ -81,14 +81,14 @@
 		<h3>
 		<?php // Depending on the hour of the day a different message is displayed.
 			$now = date('H');
-				if (($now > 06) and ($now < 10)) echo 'Good morning!';
+				if (($now > 05) and ($now < 10)) echo 'Good morning!';
 				else if (($now >= 10) and ($now < 12)) echo 'Have a nice day!';
 				else if (($now >= 12) and ($now < 14)) echo 'Time for lunch!';
 				else if (($now >= 14) and ($now < 17)) echo 'Come and see!';
 				else if (($now >= 17) and ($now < 20)) echo 'Time to start to think about dinner?';
-				else if (($now >= 20) and ($now < 22)) echo 'Have a nice evening!';
+				else if (($now >= 20) and ($now < 22)) echo 'Shouldn't you be coding?;
 				else if (($now >= 22) and ($now < 23)) echo 'Sleep tight, see you tomorrow!';
-				else if (($now >= 00) and ($now < 06)) echo 'Shh, sleeping...';
+				else if (($now >= 00) and ($now < 05)) echo 'Shh, sleeping...';
 			?>
 		</h3>
 	</div>
